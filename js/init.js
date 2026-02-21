@@ -255,6 +255,13 @@
     if (e.key === 'Escape') closeModal();
   });
 
+  /* Email links (assembled in JS to reduce harvesting by scrapers)
+  ----------------------------------------------------------------------- */
+  var emailHref = 'mailto:' + 'ray' + '\x40' + 'okadallc' + '.com';
+  document.querySelectorAll('.js-email').forEach(function (a) {
+    a.href = emailHref;
+  });
+
   /* Copyright year
   ----------------------------------------------------------------------- */
   var yearEl = document.getElementById('copyright-year');
